@@ -1,4 +1,4 @@
-# Методы программирования 2: Матрицы на шаблонах
+# Programming Methods 2: Matrices on Templates
 
 [![Build Status](https://travis-ci.org/UNN-VMK-Software/mp2-lab1-set.svg)][travis]
 
@@ -6,75 +6,46 @@
   -
 -->
 
-## Цели и задачи
+## Goals and objectives
 
-В рамках лабораторной работы ставится задача создания программных средств, поддерживающих эффективное хранение матриц и выполнение основных операций над ними:
+As part of the laboratory work, the task is to create software that supports the efficient storage of matrices and the performance of basic operations on them:
 
-- сложение/вычитание;
-- копирование;
-- сравнение.
+- addition/subtraction;
+- copying;
+- comparison.
 
-В процессе выполнения лабораторной работы требуется использовать систему контроля версий [Git][git] и фрэймворк для разработки автоматических тестов [Google Test][gtest].
+Performing the work involves solving the following tasks:
 
-Перед выполнением работы студенты получают данный проект-шаблон, содержащий следующее:
+  1. Implementation of methods of the template class `TVector` according to the specified interface.
+  2. Implementation of methods of the template class `TMatrix` according to the specified interface.
+  3. Ensuring the functionality of the tests and example of use.
+  4. Implementation of test templates covering all methods of the `TVector` and `TMatrix` classes.
+  5. Modification of the use case into a test application that allows you to specify matrices and perform basic operations on them.
+     
+## Tools used
 
- - Интерфейсы классов Вектор и Матрица (h-файл)
- - Начальный набор готовых тестов для каждого из указанных классов.
- - Набор заготовок тестов для каждого из указанных классов. 
- - Тестовый пример использования класса Матрица
-
-Выполнение работы предполагает решение следующих задач:
-
-  1. Реализация методов шаблонного класса `TVector` согласно заданному интерфейсу.
-  1. Реализация методов шаблонного класса `TMatrix` согласно заданному интерфейсу.
-  1. Обеспечение работоспособности тестов и примера использования.
-  1. Реализация заготовок тестов, покрывающих все методы классов `TVector` и `TMatrix`.
-  1. Модификация примера использования в тестовое приложение, позволяющее задавать матрицы и осуществлять основные операции над ними.
-
-## Используемые инструменты
-
-  - Система контроля версий [Git][git]. Рекомендуется использовать один из
-    следующих клиентов на выбор студента:
+  - Version control system [Git][git].
     - [Git](https://git-scm.com/downloads)
     - [GitHub Desktop](https://desktop.github.com)
-  - Фреймворк для написания автоматических тестов [Google Test][gtest]. Не
-    требует установки, идет вместе с проектом-шаблоном.
-  - Среда разработки Microsoft Visual Studio.
-  - Опционально. Утилита [CMake](http://www.cmake.org) для генерации проектов по
-    сборке исходных кодов. Может быть использована для генерации решения для
-    среды разработки, отличной от предоставленной в данном проекте-шаблоне.
+  - - Framework for writing automated tests [Google Test][gtest].
+  - Microsoft Visual Studio development environment.
+  - tility [CMake](http://www.cmake.org) for generating projects based on assembly of source codes.
 
-## Общая структура проекта
+## General project structure
 
-Структура проекта:
-
-  - `docs` — инструкции по выполнению лабораторной работы, полезные документы.
-  - `gtest` — библиотека Google Test.
-  - `include` — директория для размещения заголовочных файлов.
-  - `samples` — директория для размещения тестового приложения.
-  - `sln` — директория с файлами решений и проектов для VS 2008 и VS 2010,
-    вложенные директории `vc9` и `vc10` соответственно.
-  - `src` — директория для размещения исходных кодов (cpp-файлы).
-  - `test` — директория с модульными тестами и основным приложением,
-    инициализирующим запуск тестов.
-  - `README.md` — информация о проекте, которую вы сейчас читаете.
-  - Служебные файлы
-    - `.gitignore` — перечень расширений файлов, игнорируемых Git при добавлении
-      файлов в репозиторий.
-    - `CMakeLists.txt` — корневой файл для сборки проекта с помощью CMake. Может
-      быть использован для генерации проекта в среде разработки, отличной от
-      Microsoft Visual Studio.
-    - `.travis.yml` — конфигурационный файл для системы автоматического
-      тестирования Travis-CI. Тесты, входящие в состав шаблонного проекта,
-      регулярно запускаются на удаленной [инфраструктуре][travis].
-
-В решении содержатся следующие модули:
-
-  - Модуль `utmatirx`, содержащий реализацию классов Вектор и Матрица (файл
-    `./include/utmatrix.h`). Поскольку оба класса шаблонные, реализацию методов необходимо выполнять непосредственно в заголовочном файле. При этом интерфейсы классов должны
-    оставаться неизменными.
-  - Тесты для классов Вектор и Матрица (файлы `./test/test_tvector.cpp`, `./test/test_tmatrix.cpp`).
-  - Пример использования класса Матрица (файл `./samples/sample_matrix.cpp`).
+  - `docs` — instructions for performing laboratory work, useful documents.
+  - `gtest` — Google Test library.
+  - `include` — directory for placing header files.
+  - `samples` — directory for placing demo applications.
+  - `src` — directory with source codes (cpp files).
+  - `test` — directory with unit tests and the main application,
+     initializing the launch of tests.
+  - `README.md` — information about the project that you are currently reading.
+  - `.gitignore` — list of file extensions ignored by Git when adding files to the repository.
+  -  `CMakeLists.txt` — is the root file for building a project using CMake.Can be used to generate a project in a development environment other than Microsoft Visual Studio.
+  - `travis.yml` — configuration file for the automatic
+       testing Travis-CI. Tests included in the template project
+       regularly run on remote [infrastructure][travis].
 
 <!-- LINKS -->
 
