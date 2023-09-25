@@ -27,7 +27,7 @@ Performing the work involves solving the following tasks:
   - Version control system [Git][git].
     - [Git](https://git-scm.com/downloads)
     - [GitHub Desktop](https://desktop.github.com)
-  - - Framework for writing automated tests [Google Test][gtest].
+  - Framework for writing automated tests [Google Test][gtest].
   - Microsoft Visual Studio development environment.
   - tility [CMake](http://www.cmake.org) for generating projects based on assembly of source codes.
 
